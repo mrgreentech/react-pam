@@ -4,6 +4,7 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
+  "license": "MIT",
   "peerDependencies": {
     "pam": "git+https://github.com/mrgreentech/pam.git#legendary-grasshopper",
     "react": "^16.2.0",
