@@ -1,5 +1,5 @@
 import React from 'react';
 
-const TableCell = ({children, ...rest}) => <td {...rest}>{children}</td>;
+const TableCell = props => <td {...props}/>;
 
 export default TableCell;

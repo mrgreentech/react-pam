@@ -2,7 +2,7 @@ import React from 'react';
 import TableCell from './TableCell';
 import PropTypes from "prop-types";
 
-const TableRow = ({children, ...rest}) => <tr {...rest}>{children}</tr>;
+const TableRow = props => <tr {...props}/>;
 
 TableRow.propTypes = {
   children: PropTypes.oneOfType([

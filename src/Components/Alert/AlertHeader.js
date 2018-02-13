@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AlertHeader = ({children, ...rest}) => {
-  return (<h1 pam-alert-heading="" {...rest}>{children}</h1>)
+const AlertHeader = props => {
+  return (<h1 pam-alert-heading="" {...props}/>)
 };
 
 export default AlertHeader;

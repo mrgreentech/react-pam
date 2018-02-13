@@ -1,5 +1,5 @@
 import React from 'react';
 
-const TableCaption = ({children, ...rest}) => <caption {...rest}>{children}</caption>;
+const TableCaption = props => <caption {...props}/>;
 
 export default TableCaption;

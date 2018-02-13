@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import { select, boolean, text, number } from '@storybook/addon-knobs/react';
 import Alert, {Types, AlertHeader} from '../src/Components/Alert'
 

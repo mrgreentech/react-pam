@@ -6,7 +6,7 @@ const Sizes = ['', 'mini', 'small', 'large'];
 const States = ['', 'active', 'disabled', 'hidden'];
 const Variations = ['', 'primary', 'secondary', 'tertiary', 'link'];
 
-const Button = ({ children, color, fab, flat, fluid, raised, rounded, size, state, variation, ...rest}) => {
+const Button = ({ color, fab, flat, fluid, raised, rounded, size, state, variation, ...rest}) => {
   const props = [];
   if(color.length) {props.push(color)}
   if(fab) {props.push('circle')}
@@ -18,7 +18,7 @@ const Button = ({ children, color, fab, flat, fluid, raised, rounded, size, stat
   if(state.length) {props.push(state)}
   if(variation.length) {props.push(variation)}
 
-  return <button pam-button={props.join(' ')} {...rest}>{children}</button>;
+  return <button pam-button={props.join(' ')} {...rest}/>;
 };
 
 Button.propTypes = {

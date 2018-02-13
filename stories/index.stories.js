@@ -11,6 +11,8 @@ import {ButtonDefault, ButtonGroups} from './Buttons';
 import {TableDefault} from './Table';
 import {MenuDefault} from './Menu';
 import {AlertDefault} from './Alert';
+import {LinkDefault, LinkCustomComponent} from './Link';
+import {FormDefault} from './Form';
 
 addDecorator(withKnobs);
 
@@ -23,8 +25,15 @@ storiesOf('Button', module)
   .add('Basic button', ButtonDefault)
   .add('Button Group', ButtonGroups);
 
-storiesOf('Table', module)
-  .add('Basic table', TableDefault);
+storiesOf('Form', module)
+  .add('Basic form', FormDefault);
+
+storiesOf('Link', module)
+  .add('Basic link', LinkDefault)
+  .add('Custom component', LinkCustomComponent);
 
 storiesOf('Menu', module)
   .add('Basic menu', MenuDefault);
+
+storiesOf('Table', module)
+  .add('Basic table', TableDefault);

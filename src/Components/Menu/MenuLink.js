@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MenuLink = ({children, component, ...rest}) => {
-  if(!component) return (<a pam-menu-link="" {...rest}>{children}</a>);
-  return (<component pam-menu-link="" {...rest}>{children}</component>)
+const MenuLink = ({component: Component, ...rest}) => {
+  if(!Component) return (<a pam-menu-link="" {...rest}/>);
+  return (<Component pam-menu-link="" {...rest}/>)
 };
 
 MenuLink.propTypes = {

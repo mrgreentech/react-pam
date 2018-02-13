@@ -9,14 +9,14 @@ import TableHead from './TableHead';
 
 const Borders = ['', 'horizontal', 'bordered', 'borderless'];
 
-const Table = ({border, centered, children, striped, fluid, ...rest}) => {
+const Table = ({border, centered, striped, fluid, ...rest}) => {
   const props = [];
   if(border.length) {props.push(border)}
   if(centered) {props.push('centered')}
   if(fluid) {props.push('fluid')}
   if(striped) {props.push('striped')}
 
-  return (<table pam-table={props.join(' ')} {...rest}>{children}</table>);
+  return (<table pam-table={props.join(' ')} {...rest}/>);
 };
 
 Table.propTypes = {

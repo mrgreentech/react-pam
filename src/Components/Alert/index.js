@@ -4,7 +4,7 @@ import AlertHeader from './AlertHeader'
 
 const Types = ['', 'info', 'success', 'warning', 'danger'];
 
-const Alert = ({ children, type, ...rest}) => <div pam-alert={type.length ? type : ''} {...rest}>{children}</div>;
+const Alert = ({ type, ...rest}) => <div pam-alert={type.length ? type : ''} {...rest}/>;
 
 Alert.propTypes = {
   type: PropTypes.oneOf(Types)
