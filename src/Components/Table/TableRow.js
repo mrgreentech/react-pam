@@ -1,8 +1,8 @@
 import React from 'react';
 import TableCell from './TableCell';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-const TableRow = props => <tr {...props}/>;
+const TableRow = props => <tr {...props} />;
 
 TableRow.propTypes = {
   children: PropTypes.oneOfType([
@@ -10,7 +10,5 @@ TableRow.propTypes = {
     PropTypes.instanceOf(TableCell)
   ])
 };
-
-
 
 export default TableRow;

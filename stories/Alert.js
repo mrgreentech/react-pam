@@ -1,9 +1,9 @@
 import React from 'react';
 import { select, boolean, text, number } from '@storybook/addon-knobs/react';
-import Alert, {Types, AlertHeader} from '../src/Components/Alert'
+import Alert, { AlertTypes, AlertHeader } from '../src/Components/Alert';
 
 function AlertDefault() {
-  const Type = select('Type', Types, '');
+  const Type = select('Type', AlertTypes, '');
   return (
     <Alert type={Type}>
       <AlertHeader>Title</AlertHeader>
@@ -12,4 +12,4 @@ function AlertDefault() {
   );
 }
 
-export {AlertDefault};
+export { AlertDefault };

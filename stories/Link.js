@@ -1,14 +1,12 @@
 import React from 'react';
-import Link from '../src/Components/Link'
-import Button from '../src/Components/Button'
+import Link from '../src/Components/Link';
+import Button from '../src/Components/Button';
 
 function LinkDefault() {
-
-  return (<Link href={'#'}>Link</Link>);
+  return <Link href={'#'}>Link</Link>;
 }
 
 function LinkCustomComponent() {
-
   return (
     <div>
       <Link component={'button'}>Button link</Link>
@@ -17,4 +15,4 @@ function LinkCustomComponent() {
   );
 }
 
-export {LinkDefault, LinkCustomComponent};
+export { LinkDefault, LinkCustomComponent };

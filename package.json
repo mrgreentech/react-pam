@@ -13,16 +13,25 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.12",
+    "@storybook/addon-centered": "^3.3.13",
     "@storybook/addon-knobs": "^3.3.12",
     "@storybook/addon-links": "^3.3.12",
     "@storybook/addons": "^3.3.12",
     "@storybook/react": "^3.3.12",
     "babel-core": "^6.26.0",
+    "eslint": "^4.17.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
     "jest": "^22.2.1",
+    "lint-staged": "^6.1.0",
     "pam": "git+https://github.com/mrgreentech/pam.git#legendary-grasshopper",
+    "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
     "rollup": "^0.50.0",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-flow": "^1.1.1",
@@ -34,9 +43,15 @@
     "test": "",
     "pretest": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "precommit": "lint-staged"
   },
-  "files": [
-    "dist"
-  ]
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true
+  },
+  "files": ["dist"]
 }

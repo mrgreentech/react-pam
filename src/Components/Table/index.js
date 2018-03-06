@@ -7,20 +7,28 @@ import TableCell from './TableCell';
 import TableRow from './TableRow';
 import TableHead from './TableHead';
 
-const Borders = ['', 'horizontal', 'bordered', 'borderless'];
+const TableBorders = ['', 'horizontal', 'bordered', 'borderless'];
 
-const Table = ({border, centered, striped, fluid, ...rest}) => {
+const Table = ({ border, centered, striped, fluid, ...rest }) => {
   const props = [];
-  if(border.length) {props.push(border)}
-  if(centered) {props.push('centered')}
-  if(fluid) {props.push('fluid')}
-  if(striped) {props.push('striped')}
+  if (border.length) {
+    props.push(border);
+  }
+  if (centered) {
+    props.push('centered');
+  }
+  if (fluid) {
+    props.push('fluid');
+  }
+  if (striped) {
+    props.push('striped');
+  }
 
-  return (<table pam-table={props.join(' ')} {...rest}/>);
+  return <table pam-table={props.join(' ')} {...rest} />;
 };
 
 Table.propTypes = {
-  border: PropTypes.oneOf(Borders),
+  border: PropTypes.oneOf(TableBorders),
   centered: PropTypes.bool,
   children: PropTypes.any,
   fluid: PropTypes.bool,
@@ -36,4 +44,12 @@ Table.defaultProps = {
 };
 
 export default Table;
-export {Borders, TableHead, TableRow, TableCell, TableCaption, TableBody};
+export {
+  Table,
+  TableBorders,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+  TableBody
+};

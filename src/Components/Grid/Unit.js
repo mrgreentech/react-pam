@@ -1,15 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Unit = ({'default': defaultUnit, small, medium, large, xlarge, ...rest}) => {
+const Unit = ({
+  default: defaultUnit,
+  small,
+  medium,
+  large,
+  xlarge,
+  ...rest
+}) => {
   const props = [];
-  if(defaultUnit.length) { props.push(defaultUnit)}
-  if(small.length) {props.push(`small:${small}`)}
-  if(medium.length) {props.push(`medium:${medium}`)}
-  if(large.length) {props.push(`large:${large}`)}
-  if(xlarge.length) {props.push(`xlarge:${xlarge}`)}
+  if (defaultUnit.length) {
+    props.push(defaultUnit);
+  }
+  if (small.length) {
+    props.push(`small:${small}`);
+  }
+  if (medium.length) {
+    props.push(`medium:${medium}`);
+  }
+  if (large.length) {
+    props.push(`large:${large}`);
+  }
+  if (xlarge.length) {
+    props.push(`xlarge:${xlarge}`);
+  }
 
-  return (<div pam-unit={props.join(' ')} {...rest}/>);
+  return <div pam-unit={props.join(' ')} {...rest} />;
 };
 
 Unit.propTypes = {
@@ -17,7 +34,7 @@ Unit.propTypes = {
   small: PropTypes.string,
   medium: PropTypes.string,
   large: PropTypes.string,
-  xlarge: PropTypes.string,
+  xlarge: PropTypes.string
 };
 
 Unit.defaultProps = {
@@ -25,7 +42,7 @@ Unit.defaultProps = {
   small: '',
   medium: '',
   large: '',
-  xlarge: '',
+  xlarge: ''
 };
 
 export default Unit;

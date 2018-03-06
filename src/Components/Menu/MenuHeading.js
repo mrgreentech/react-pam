@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MenuHeading = ({component:Component, ...rest}) => {
-  if(!Component) return (<a pam-menu-heading="" {...rest}/>);
-  return (<Component pam-menu-heading="" {...rest}/>)
+const MenuHeading = ({ component, ...rest }) => {
+  const Component = component ? component : 'a';
+  return <Component pam-menu-heading="" {...rest} />;
 };
 
 MenuHeading.propTypes = {

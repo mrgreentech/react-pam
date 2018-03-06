@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 const States = ['', 'success', 'danger'];
 const Sizes = ['', 'large', 'small'];
 
-const Field = ({component, fluid, state, size, width, ...rest}) => {
+const Field = ({ component, fluid, state, size, width, ...rest }) => {
   const props = [];
-  if(fluid) {props.push('fluid')}
+  if (fluid) {
+    props.push('fluid');
+  }
 
   const formState = state.length ? state : null;
   const formSize = size.length ? size : null;
@@ -18,7 +20,8 @@ const Field = ({component, fluid, state, size, width, ...rest}) => {
       pam-form-state={formState}
       pam-form-size={formSize}
       pam-form-width={formWidth}
-      {...rest}/>
+      {...rest}
+    />
   );
 };
 
@@ -39,7 +42,7 @@ Field.propTypes = {
   type: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
-  onBlur: PropTypes.func,
+  onBlur: PropTypes.func
 };
 
 Field.defaultProps = {

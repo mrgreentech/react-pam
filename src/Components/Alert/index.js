@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AlertHeader from './AlertHeader'
+import AlertHeader from './AlertHeader';
 
-const Types = ['', 'info', 'success', 'warning', 'danger'];
+const AlertTypes = ['', 'info', 'success', 'warning', 'danger'];
 
-const Alert = ({ type, ...rest}) => <div pam-alert={type.length ? type : ''} {...rest}/>;
+const Alert = ({ type, ...rest }) => (
+  <div pam-alert={type.length ? type : ''} {...rest} />
+);
 
 Alert.propTypes = {
-  type: PropTypes.oneOf(Types)
+  type: PropTypes.oneOf(AlertTypes)
 };
 
 Alert.defaultProps = {
@@ -15,4 +17,4 @@ Alert.defaultProps = {
 };
 
 export default Alert;
-export {Types, AlertHeader}
+export { Alert, AlertTypes, AlertHeader };

@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Link = ({component: Component, ...rest}) => {
-  if(!Component){
-    return <a pam-link="" {...rest}/>;
-  }
-
-  return <Component pam-link="" {...rest}/>;
+const Link = ({ component, ...rest }) => {
+  const Component = component ? component : 'a';
+  return <Component pam-link="" {...rest} />;
 };
 
 Link.propTypes = {
@@ -14,3 +11,4 @@ Link.propTypes = {
 };
 
 export default Link;
+export { Link };

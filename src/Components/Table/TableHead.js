@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import TableRow from "./TableRow";
+import PropTypes from 'prop-types';
+import TableRow from './TableRow';
 
-const TableHead = props => <thead {...props}/>;
+const TableHead = props => <thead {...props} />;
 
 TableHead.propTypes = {
   children: PropTypes.instanceOf(TableRow)

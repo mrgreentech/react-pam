@@ -4,13 +4,19 @@ import Field from './Field';
 import Fieldset from './Fieldset';
 import Message from './Message';
 
-const Form = ({component, aligned, stacked, padded, ...rest}) => {
+const Form = ({ component, aligned, stacked, padded, ...rest }) => {
   const props = [];
-  if(stacked) {props.push('stacked')}
-  if(padded) {props.push('padded')}
-  if(aligned) {props.push('aligned')}
+  if (stacked) {
+    props.push('stacked');
+  }
+  if (padded) {
+    props.push('padded');
+  }
+  if (aligned) {
+    props.push('aligned');
+  }
   const Component = component ? component : 'form';
-  return (<Component pam-form={props.join(' ')} {...rest}/>)
+  return <Component pam-form={props.join(' ')} {...rest} />;
 };
 
 Form.propTypes = {
@@ -27,4 +33,4 @@ Form.defaultProps = {
 };
 
 export default Form;
-export {Field, Fieldset, Message};
+export { Form, Field, Fieldset, Message };
