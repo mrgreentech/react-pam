@@ -17,16 +17,16 @@
     "@storybook/addon-knobs": "^3.3.14",
     "@storybook/addon-links": "^3.3.14",
     "@storybook/addons": "^3.3.14",
-    "@storybook/react": "^3.3.14",
+    "@storybook/react": "^5.1.9",
     "babel-core": "^6.26.0",
     "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.2",
+    "jest": "^24.8.0",
     "lint-staged": "^6.1.1",
-    "pam": "git+https://github.com/mrgreentech/pam.git#legendary-grasshopper",
+    "pam-css": "^1.0.0-beta.3",
     "prettier": "^1.11.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -47,11 +47,16 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "prettier": {
     "semi": true,
     "singleQuote": true
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
